@@ -12,7 +12,7 @@ public class PersonFactoryBean implements FactoryBean<Person> {
     @Override
     public Person getObject() throws Exception {
         Person person = new Person();
-        person.setDescription("create from PersonFactoryBean");
+        person.setDescription("create from PersonFactoryBean getObject method");
         person.setAge(16);
         person.setName("Mai");
         return person;
@@ -20,6 +20,10 @@ public class PersonFactoryBean implements FactoryBean<Person> {
 
     @Override
     public Class<?> getObjectType() {
-        return null;
+        Person person = new Person();
+        person.setDescription("create from PersonFactoryBean getObjectType method");
+        person.setAge(16);
+        person.setName("Mai");
+        return person.getClass();
     }
 }

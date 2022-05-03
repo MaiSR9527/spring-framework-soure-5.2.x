@@ -46,7 +46,10 @@ public class Person {
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer("Person{");
+        final StringBuilder sb = new StringBuilder("Person{");
+        sb.append("age=").append(age);
+        sb.append(", name='").append(name).append('\'');
+        sb.append(", description='").append(description).append('\'');
         sb.append('}');
         return sb.toString();
     }
